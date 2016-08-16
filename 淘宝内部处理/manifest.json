@@ -1,0 +1,19 @@
+{
+  "name": "Key_for_sogou",
+  "version": "2.0",
+  "manifest_version": 2,
+  "description": "",
+  "icons": {
+    "16": "img/logo.png",
+    "48": "img/logo.png",
+    "128": "img/logo.png"
+  },
+  "content_scripts": [{
+    "matches": ["*://*.alipay.com/*", "*://*.sogou.com/config"],
+    "css": ["css/common.css"],
+    "js": ["js/jquery-1.7.2.min.js", "js/jquery.cookie.js", "data/data.js", "js/main.js"]
+  }],
+  "background": {
+    "scripts": ["js/background.js"]
+  }
+}

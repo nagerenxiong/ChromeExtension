@@ -1,0 +1,18 @@
+{
+  "name": "上传图片插件1.0.1",
+  "version": "1.0.1",
+  "description": "",
+  "permissions":["https://*.taobao.com/*","http://*.taobao.com/*","http://localhost:8080/uzdr/*","http://127.0.0.1:8080/uzdr/*"],
+  "icons": {
+    "48" : "icon.png",
+    "128" : "icon.png"
+  },
+  "content_scripts": [
+    {
+      "matches":["https://*.taobao.com/*","http://*.taobao.com/*","http://localhost:8080/uzdr/*","http://127.0.0.1:8080/uzdr/*"],
+      "js" : ["jquery.min.js","ecc.js"],
+	  "css" :["ecc.css"]
+    }
+  ],
+    "manifest_version": 2
+}
