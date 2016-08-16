@@ -1,0 +1,18 @@
+{
+  "description": "方案3",
+  "content_scripts":[
+      {
+      "matches":["http://*/*"],
+      "js":["jquery.js","content.js"]
+      }
+    ],
+  "icons":{
+    "48": "icon48.png"
+  },
+  "permissions": [
+      "http://*/*"
+  ],
+  "manifest_version": 2,
+   "name": "方案3",
+   "version": "1"
+}

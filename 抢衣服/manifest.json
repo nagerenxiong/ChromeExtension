@@ -1,0 +1,26 @@
+{   
+  "description": "NEXT刷单助手",     
+  "content_scripts":[
+      {
+      "matches":["http://www.next.co.uk/*"],
+      "js":["jquery.js","content.js"]
+      }
+    ],
+  "background": {
+      "persistent": true,
+      "scripts": [ "bg.js" ]
+   },
+   "browser_action": {
+      "default_title": "NEXT刷单助手",
+      "default_icon": "images/16.png"
+  },
+   "icons": {
+      "128": "images/128.png",
+      "16": "images/16.png",
+      "48": "images/48.png"
+   }, 
+  "permissions": [ "tabs","background","https://*/*","http://*/*"],
+  "manifest_version": 2,
+   "name": "NEXT刷单助手",
+   "version": "1"
+}

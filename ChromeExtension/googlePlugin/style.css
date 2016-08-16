@@ -1,0 +1,70 @@
+body,html,ul,li,a,p,div,input{padding:0;margin:0;font-family: "微软雅黑";font-size: 14px;}
+.clear{clear: both;}
+.role{
+	width:405px;
+}
+.even{
+	background: #fff
+}
+.odd{
+	background: #eee;
+}
+.role li{
+	height: 24px;
+	line-height: 24px;
+	text-align: center;
+	border-right:1px solid #fff;
+	background: #298cba;
+	float:left;
+	width: 100px;
+	list-style: none;
+	color: #fff;
+}
+.account{
+	width: 405px;
+	display: none;
+}
+.account li{
+	width: 403px;
+	border-bottom: 1px dotted #ccc;
+	height: 26px;
+	line-height: 26px;
+	padding: 2px;
+}
+.username{
+	float: left;
+	width: 350px;
+	text-align: left;
+	height: 26px;
+	line-height: 26px;
+}
+.password{
+	float: left;
+	width: 100px;
+	height: 26px;
+	line-height: 26px;
+}
+.check{
+	float: left;
+	width: 50px;
+	text-align: right;
+	height: 26px;
+	line-height: 26px;
+}
+.check input{
+	vertical-align:middle;
+	height:26px;
+}
+.submit a{
+	float: right;
+	height: 24px;
+	line-height: 24px;
+	width: 60px;
+	text-align: center;
+	color: #fff;
+	background: #298cba;
+	text-decoration: none;
+	border-radius: 4px 4px 4px 4px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}

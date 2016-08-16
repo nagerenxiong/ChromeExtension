@@ -1,0 +1,36 @@
+文件说明
+========
+
+crx_info.json：
+    保存扩展信息的文件。一般无须手动修改。使用manage.html时可参考一下。该文件内容须为UTF-8无BOM格式。（推荐文本编辑工具Notepad++）
+
+manage.html：
+    上传新扩展信息或更新已有扩展信息的页面。需用到upload.php。更新成功后会更新crx_info.json文件。
+
+uploadCrx.php：
+    需用到crx_info.json文件。
+
+updateInfo.php：
+    供扩展自动更新时获取更新信息判断是否要升级所用。会从crx_info.json读取扩展信息。里面要有密码需要更改（第17、18行）！
+
+updateCrx.php:
+    上传扩展文件到服务器，里面也有密码需要更新（第9、10行）。
+
+getHash.html（需用到getHash.php）：
+　　方便生成密码相应的hash值的工具，「salt」即为生成hash值的因子。具体用法见updateInfo.php与updateCrx.php相应内容。
+
+.htaccess：
+    隐藏该文件夹文件所用。
+
+
+使用说明
+========
+
+1. 在扩展的manifest.json中加入：
+    "update_url": "该文件夹的URL/update.php?crx=扩展简称（英文小写）"
+    如此即可。然后去manage.html管理更新链接向Chrome发回的内容。
+
+2. 进入manage.html更新扩展信息。默认密码「open」。
+
+3. OK。
+

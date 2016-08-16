@@ -1,0 +1,38 @@
+<?xml version="1.0.0" encoding="utf-8"?>
+<extension>
+  <manifest_version>2</manifest_version>
+  <id>com.sogou.zhenxiangtao</id>
+  <name>真相淘</name>
+  <description>一秒看到买家秀</description>
+  <author>Sogou</author>
+  <show_icon>false</show_icon>
+  <need_passport>true</need_passport>
+  <version>1.0.0.1</version>
+  <background page="background.html"></background>
+  <content_security_policy>script-src 'self' 'unsafe-eval'; object-src 'self'</content_security_policy>
+  <web_accessible_resources>
+    <web_accessible_resource></web_accessible_resource>
+  </web_accessible_resources>
+  <permissions>
+    <permissions>storage</permissions>
+    <permission>sogou</permission>
+  </permissions>
+  <content_scripts>
+    <content_script core_type="webkit">
+      <js>js/sogou-jquery.js</js>
+      <js>js/mustache.js</js>
+      <js>js/contentjs.js</js>
+      <js>js/tools.js</js>
+      <css>css/style.css</css>
+      <match>*://*.taobao.com/search*</match>
+    </content_script>
+    <content_script core_type="webkit">
+      <js>js/sogou-jquery.js</js>
+      <js>js/mustache.js</js>
+      <js>js/contentjs.js</js>
+      <js>js/tools.js</js>
+      <css>css/style.css</css>
+      <match>*://*.tmall.com/search_product.htm*</match>
+    </content_script>
+  </content_scripts>
+</extension>

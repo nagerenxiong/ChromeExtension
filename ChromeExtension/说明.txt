@@ -1,0 +1,11 @@
+/*
+*
+* http://www.jahng.cn
+*
+*/
+由于工作上的项目测试账号太多，每个项目都有不同的账号，每次登录都要去找对应的账号，觉得麻烦，所以写这个插件帮我自动检索出当前的项目的账号，让我自己选择。
+
+这个插件包含了
+main.js（popup页面使用的js） 跟 background.js（后台） 之前的通信
+main.js（popup页面使用的js） 跟 content.js（注入到dom的js） 之前的通信
+background.js 跟 cntent.js 之前的通信

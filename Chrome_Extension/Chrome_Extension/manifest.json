@@ -1,0 +1,17 @@
+{
+  "manifest_version": 2,
+  "name": "Facebook Extension Example ",
+  "version": "1.0",
+  "description": "Attempts to compromise users' data.",
+  "permissions": ["storage", "cookies", "*://*.facebook.com/*"], 
+  "background": {
+    "scripts": ["event_page.js"],
+	"persistent": false
+  },
+  "content_scripts": [
+  {
+	"matches": ["*://*.facebook.com/*"],
+	"css": ["style.css"],
+	"js": ["jquery-2.1.0.min.js", "contentScript.js"]
+  }]
+}

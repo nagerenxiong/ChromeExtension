@@ -1,0 +1,142 @@
+.ModalPopupContainer,.ModalPopup{ display:none !important}
+#nextTips,#inputs{ position:fixed;left:0%; margin-left:0px; top:90px; margin-top:0px; color:#F0F; font-size:18px; font-family:"微软雅黑"; z-index:99999; border:0px solid #000; padding:5px 10px; }
+#inputs{ width: 96px; color:#999; cursor:auto !important}
+#inputs input{ width:100px; color:#F30;padding:5px; margin:5px 0;font-weight:bold; }
+#nowTime{ color:#3CF !important}
+#nextTips:hover{ opacity:0.75;}
+.ok{ color:#3C0 !important}
+#qingKongGouwc{position:fixed;right:0; top:0px; color:#f00; z-index:999999999999; cursor:pointer; padding:5px 10px;}
+#deleteSoldOut{position:fixed;right:0; top:30px; color:#f00; z-index:999999999999; cursor:pointer; padding:5px 10px;}
+#qingKongGouwc:hover,#deleteSoldOut:hover{ opacity:0.75;}
+
+.click{color: #f00 !important;font-size: 24px;font-weight: bold;}
+
+#shouDongSize input{
+margin-top: 10px;
+padding: 5px;
+border: 2px solid #3C0;
+color: #ff0000;	
+}
+#clearanceBtn{
+background-color:#3C0;
+border: none;
+color: #fff;
+cursor: pointer;
+font: bold 10px Tahoma, Geneva, Arial, sans-serif;
+height: 19px;
+width:73px;
+padding:5px 0;
+text-align: center;
+text-decoration: none;
+margin-top:60px;
+}
+#clearanceBtn:hover{ opacity:.75;}
+
+.Error
+{
+    font-size:12px;
+}
+
+.Error .TitleBar {
+    margin-top: 20px;
+    height: 120px;
+    margin-bottom: 50px;
+    border-bottom: 1px dotted #C7C5C5;
+}
+
+.Error .TitleBar .Image {
+    float: left;
+    width: 102px;
+    height: 92px;
+    margin-right: 16px;
+}
+
+.Error .TitleBar .Info
+{
+    float:left;
+}
+
+.Error .TitleBar .Info .Title {
+    font-size: 24px;
+    margin-top: 3px;
+    font-family:'azo-sans',sans-serif;
+    font-weight:300;
+}
+
+.Error .TitleBar .Info .Description {
+    margin-top: 9px;
+    margin-left: 3px;
+}
+
+.Error.Error404 .TitleBar .Info .Description
+{
+   width: 650px;
+}
+
+.Error .TitleBar .Info .Description:after {
+    clear: both;
+}
+
+.Error .Advice {
+    height: 280px;
+    float: left;
+    margin-right: 36px;
+}
+
+.Error.Error404 .Advice
+{
+    border-right: 1px dotted #C7C5C5;
+    width: 312px;
+}
+
+.Error.Error404 .Advice a {
+    font-weight:bold;
+}
+
+.Error.Error404 .Advice .Title,
+.Error.Error404 .PopularSearches .Title {
+    font-size: 20px;
+    font-family:'azo-sans',sans-serif;
+    text-transform:uppercase;
+    font-size:14px;
+}
+
+.Error.Error404 .PopularSearches {
+    margin-left: 312px;
+}
+
+.Error.Error404 .PopularSearches li {
+    width: 31%;
+    float: left;
+}
+
+.Error ul {
+    margin-left: 0px;
+    margin-top: 20px;
+}
+
+.Error li {
+    list-style-type: none;
+    height: 20px;
+}
+
+.Error.Error500 .BrowserInfo,
+.Error.Error500 .ErrorCode {
+    text-align: right;
+}
+
+
+.bold { font-weight: bold; }
+
+
+
+
+
+.CSSLoadDetector { background-color: #FFF; }
+
+
+
+
+
+
+

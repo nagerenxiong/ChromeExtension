@@ -1,0 +1,16 @@
+{
+    "description": "百度贴吧群发器",
+    "content_scripts": [{
+        "matches": ["http://www.baidu.com/*", "http://tieba.baidu.com/*"],
+        "js": ["jquery.js", "content.js"]
+    }],
+    "icons": {
+        "48": "icon48.png"
+    },
+    "permissions": [
+        "http://1.nageren.sinaapp.com/index.php"
+    ],
+    "manifest_version": 2,
+    "name": "百度贴吧群发器",
+    "version": "1"
+}

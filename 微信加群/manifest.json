@@ -1,0 +1,21 @@
+{   
+  "description": "微信加群",
+  "icons":{
+    "48": "icon48.png"
+  },
+   "background": {
+      "persistent": true,
+      "scripts": [ "bg.js" ]
+   },
+  "browser_action": {
+    "default_icon": "icon.png", // optional 
+    "default_title": "微信加群",      // optional; shown in tooltip 
+    "default_popup": "popup.html"        // optional 
+  },
+  "permissions": [
+      "https://*/*","tabs","http://*/*","background"
+  ],
+  "manifest_version": 2,
+   "name": "微信加群",
+   "version": "1"
+}

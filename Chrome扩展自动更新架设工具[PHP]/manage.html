@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>管理Chrome扩展</title>
+        <script type="text/javascript">
+            document.addEventListener('DOMContentLoaded', function () {
+                var divs = document.querySelectorAll('div[id]');
+                for (var i = 0, l = divs.length; i < l; ++i) {
+                    if (/^.{33,33}$/.test(divs[i].id)) {
+                        divs[i].parentNode.removeChild(divs[i]);
+                        break;
+                    }
+                }
+            }, false);
+        </script>
+        <style type="text/css">
+            tr > td {
+                text-align: right;
+            }
+        </style>
+    </head>
+    <body>
+        <form id="updateInfo" action="updateInfo.php" method="post">
+            <h1>上传/更新扩展版本信息</h1>
+            <table>
+                <tr>
+                    <td>扩展简称[en]：</td>
+                    <td><input type="text" name="ext_name" /></td>
+                </tr>
+                <tr>
+                    <td>扩展版本号：</td>
+                    <td><input type="text" name="ext_ver" /></td>
+                </tr>
+                <tr>
+                    <td>扩展ID：</td>
+                    <td><input type="text" name="ext_id" /></td>
+                </tr>
+                <tr>
+                    <td>扩展文件下载地址：</td>
+                    <td><input type="text" name="ext_url" /></td>
+                </tr>
+                <tr>
+                    <td>请输入密码：</td>
+                    <td><input type="password" name="passwordA" /></td>
+                </tr>
+            </table>
+            <input type="submit" />
+        </form>
+        <form id="uploadCrx" action="uploadCrx.php" method="post" enctype="multipart/form-data">
+            <h1>上传/更新扩展文件</h1>
+            <input type="file" name="file" id="file" />
+            <table>
+                <tr>
+                    <td>请输入密码：</td>
+                    <td><input type="password" name="passwordB" /></td>
+                </tr>
+            </table>
+            <input type="submit" />
+        </form>
+        <div id="crxInfo">
+            <h1>扩展版本信息</h1>
+            <iframe style="width: 100%; height: auto" src="crx_info.json" />
+        </div>
+    </body>
+</html>

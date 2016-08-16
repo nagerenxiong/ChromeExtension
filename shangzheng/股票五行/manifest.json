@@ -1,0 +1,23 @@
+{   
+  "description": "下载器",     
+  "content_scripts":[
+      {
+      "matches":["http://www.laohuangli.net/*","http://q.stock.sohu.com/zs/000001/lshq.shtml*"],
+      "js":["jquery.js","content.js"]
+      }
+    ],  
+  "icons":{               
+    "48": "icon48.png"
+  },  
+  "browser_action": {
+      "default_title": "股票五行",
+      "default_icon": "icon.png",
+      "default_popup": "popup.html"
+  },
+  "permissions": [
+      "http://127.0.0.1:3000/"
+  ],
+  "manifest_version": 2,
+   "name": "股票五行",     
+   "version": "1"
+}

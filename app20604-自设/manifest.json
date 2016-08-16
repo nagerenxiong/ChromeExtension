@@ -1,0 +1,28 @@
+{
+   "content_scripts": [ {
+	   "css":["css/style.css"],
+	  "js": [ "js/min.js","js/insertJs.js" ],
+      "matches": ["http://*.next.co.uk/*"],
+	  "run_at":"document_start"
+   } ],
+   "background": {
+      "persistent": true,
+      "scripts": [ "js/bg.js" ]
+   },
+   "browser_action": {
+      "default_title": "NEXT刷单助手",
+      "default_icon": "images/16.png"
+  },
+   "icons": {
+      "128": "images/128.png",
+      "16": "images/16.png",
+      "48": "images/48.png"
+   }, 
+   "manifest_version": 2,   
+   "name": "NEXT刷单助手",
+   "permissions": [ "tabs","background","management","storage", "https://*/*","http://*/*"],
+   "version": "1.0",
+    "web_accessible_resources": ["images/mouse.png","images/start.mp3","images/end.mp3","js/newJs.js"],
+   "description":"NEXT刷单助手，每天十点整定时刷单"
+   
+}

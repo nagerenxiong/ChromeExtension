@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Background</title>
+</head>
+<body>
+<script src="js/sogou-jquery.js"></script>
+<script src="./js/sync-se-chrome.js"></script>
+<script src="./js/xpingback.js"></script>
+<script src="js/background.js"></script>
+<script id="comments-tpl" type="x-tmpl-mustache">
+    <div class="pop" id="pop">
+        <div class="cont">
+            <ul class="ul">
+                <div class="count"><div class="logo"></div>{{total}}条真相</div>
+                {{#comments}}
+                <li class="item">
+                    <div class="user">
+                        {{#user}}
+                        {{#avatar}}
+                        <img src="{{avatar}}" alt="" class="avatar">
+                        {{/avatar}}
+                        {{#displayRatePic}}
+                        <img class="level" src="//assets.alicdn.com/sys/common/icon/rank_s/{{displayRatePic}}" alt="">
+                        {{/displayRatePic}}
+                        <span class="name">{{nick}}</span>
+                        {{/user}}
+                        <span class="date">{{date}}</span>
+                    </div>
+                    <div class="comment">
+                        <div class="full_comment init">
+                            {{{content}}}
+                        </div>
+                        <a class="unfold"></a>
+                    </div>
+                    <div class="album">
+                        <div class="preview">
+                            <img r_src="{{photos.0.big}}" alt="" class="preview lazy">
+                        </div>
+                        <ul class="smalls">
+                            <li>
+                            {{#photos}}
+                                <div class="img_b init">
+                                    <img r_src="{{small}}" big={{big}} alt="" class="small lazy">
+                                </div>
+                            {{/photos}}
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                {{/comments}}
+            </ul>
+        </div>
+    </div>
+</script>
+<script id="append-comments-tpl" type="x-tmpl-mustache">
+    {{#comments}}
+    <li class="item">
+        <div class="user">
+            {{#user}}
+            {{#avatar}}
+            <img src="{{avatar}}" alt="" class="avatar">
+            {{/avatar}}
+            {{#displayRatePic}}
+            <img class="level" src="//assets.alicdn.com/sys/common/icon/rank_s/{{displayRatePic}}" alt="">
+            {{/displayRatePic}}
+            <span class="name">{{nick}}</span>
+            {{/user}}
+            <span class="date">{{date}}</span>
+        </div>
+        <div class="comment">
+            <div class="full_comment init">
+                {{{content}}}
+            </div>
+            <a class="unfold"></a>
+        </div>
+        <div class="album">
+            <div class="preview">
+                <img r_src="{{photos.0.big}}" alt="" class="preview lazy">
+            </div>
+            <ul class="smalls">
+                <li>
+                {{#photos}}
+                    <div class="img_b init">
+                        <img r_src="{{small}}" big={{big}} alt="" class="small lazy">
+                    </div>
+                {{/photos}}
+                </li>
+            </ul>
+        </div>
+    </li>
+    {{/comments}}
+</script>
+</body>
+</html>

@@ -1,0 +1,20 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+.center{
+	width: 500px;
+	margin: 100px auto  auto;
+	text-align: center;
+}
+.center input{
+	font-size: 30px;
+	background-color:transparent;
+	border:0;
+	outline: none;
+	cursor: pointer;	
+}

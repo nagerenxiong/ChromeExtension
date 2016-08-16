@@ -1,0 +1,23 @@
+{
+     "manifest_version": 2,
+     "name": "Relo.com Testing Account",
+     "version": "0.0.1",
+     "content_scripts":[{
+      "matches":["http://*/*","https://*/*"],
+      "js":["jquery-1.8.3.min.js","content.js"],
+      "css":["style.css"]
+     }],
+     "permissions":[
+       "tabs",
+       "notifications",
+       "idle",
+       "http://*/",
+       "https://*/"
+    ],
+    "background":{"scripts":["jquery-1.8.3.min.js","background.js"]},
+   "page_action":{
+    "default_title": "relo",
+    "default_icon": "account.png",
+    "default_popup": "account.html"
+  }
+}

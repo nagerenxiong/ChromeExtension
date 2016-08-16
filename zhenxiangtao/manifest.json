@@ -1,0 +1,27 @@
+{
+	"author": "Sogou",
+	"background": {
+		"page": "background.html"
+		//"scripts": ["js/sogou-jquery.js", "js/sync-se-chrome.js", "js/xpingback.js", "js/background.js"]
+	},
+	/* "browser_action": {
+		"default_icon": "default.png",
+		"default_title": "真相淘",
+		"default_popup": ""
+	}, */
+	"content_security_policy": "script-src 'self' https://rate.tmall.com https://rate.taobao.com 'unsafe-eval'; object-src 'self'",
+	"content_scripts":[{
+		"js": ["js/sogou-jquery.js", "js/sync-se-chrome.js", "js/mustache.js", "js/contentjs.js", "js/tools.js"],
+		"css": ["css/style.css"],
+		"matches": ["*://*.taobao.com/search*", "*://*.tmall.com/search_product.htm*"]
+	}],
+	"description": "一秒看到买家秀",
+	"icons": {
+		"48": "default-big.png"
+	},
+	"manifest_version": 2,
+	"name": "真相淘",
+	"permissions": ["storage", "tabs", "*://*.taobao.com/search*", "*://*.tmall.com/search_product.htm*"],
+	"update_url": "http://clients2.google.com/service/update2/crx",
+	"version": "1.0.0.1"
+}

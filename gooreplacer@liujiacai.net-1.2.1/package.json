@@ -1,0 +1,53 @@
+{
+  "name": "gooreplacer",
+  "title": "gooreplacer",
+  "id": "gooreplacer@liujiacai.net",
+  "description": "一个用于替换网页中Google Fonts/API/themes等的Firefox插件，让你快速打开引用这些资源的页面",
+  "author": "liujiacai",
+  "homepage": "http://liujiacai.net/gooreplacer",
+  "license": "MIT",
+  "version": "1.2.1",
+  "permissions": {"private-browsing": true},
+  "main": "lib/main.js",
+  "preferences": [{
+      "name": "isRedirect",
+      "title": "开启重定向",
+      "description": "是否允许进行资源重定向",
+      "type": "bool",
+      "value": false
+  }, {
+    "name": "setting",
+    "title": "根据自己的需求，进行自定义规则",
+    "type": "control",
+    "label": "开始自定义",
+    "description": "为了保证您的上网安全，请确保重定向资源安全可靠"
+  }, {
+    "name": "defaultDir",
+    "title": "default directory for export/import",
+    "type": "string",
+    "hidden": true
+  }, {
+    "name": "rules",
+    "title": "本地规则",
+    "type": "string",
+    "value": "{}",
+    "hidden": true
+  }, {
+    "name": "onlineRules",
+    "title": "在线规则",
+    "type": "string",
+    "value": "{}",
+    "hidden": true
+  }, {
+    "name": "onLineRulesURL",
+    "type": "string",
+    "title": "在线URL",
+    "hidden": true
+    
+  }, {
+    "name": "onlineLastUpdateTime",
+    "title": "在线规则最后一次更新时间",
+    "type": "string",
+    "hidden": true
+  }]
+}
