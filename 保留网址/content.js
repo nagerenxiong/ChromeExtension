@@ -1,5 +1,6 @@
-var appendHtml = '<div id="cateGoryBox" style="overflow-y: scroll;height: 700px;position:fixed;right:0;top:50px;background-color:#fff;box-shadow: 0 0 5px #000;padding: 5px 10px;"></div>'
+var appendHtml = '<div id="cateGoryBox" style="overflow-y: scroll;height: 700px;position:fixed;right:0;top:50px;background-color:#fff;box-shadow: 0 0 5px #000;padding: 5px 10px;"><div style="text-align:center"><input type="button" value="采集"  id="postBtn"/></div></div>'
 $("body").append(appendHtml);
+var catid = "";
 chrome.runtime.sendMessage({
 	type: 1
 }, function(response) {
@@ -35,55 +36,38 @@ chrome.runtime.sendMessage({
 			}
 		}
 	})
-	$("#cateGoryBox span").each(function(i,el){
-		if($(el).siblings().length>0)
-		{
+	$("#cateGoryBox span").each(function(i, el) {
+		if ($(el).siblings().length > 0) {
 			$(this).addClass('hide');
 		}
 	})
 	$(".lv1").click(function() {
 		if ($(this).hasClass('hide'))
 			$(this).removeClass('hide').addClass('show').siblings().show();
-		else if($(this).hasClass('show'))
+		else if ($(this).hasClass('show'))
 			$(this).removeClass('show').addClass('hide').siblings().hide();
 	})
 	$(".lv2").click(function() {
-		if ($(this).hasClass('hide')){
+		if ($(this).hasClass('hide')) {
 			$(this).removeClass('hide').addClass('show').siblings().show();
-		}
-		else if($(this).hasClass('show'))
-		{
+		} else if ($(this).hasClass('show')) {
 			$(this).removeClass('show').addClass('hide').siblings().hide();
-		}
-		else{
+		} else {
 			$("#cateGoryBox .active").removeClass('active');
 			$(this).addClass('active');
-			post($(this).parent().attr('data-catid'));
+			catid = $(this).parent().attr('data-catid');
 		}
-
 	})
 	$(".lv3").click(function() {
 		$("#cateGoryBox .active").removeClass('active');
 		$(this).addClass('active');
-		post($(this).parent().attr('data-catid'));
+		catid = $(this).parent().attr('data-catid');
 	})
 });
+$("#postBtn").click(function() {
+	chrome.runtime.sendMessage({
+		type:2,catid:catid,curUrl:window.location.href
+	}, function(res) {
 
-function post(catId)
-{
-	debugger;
-	$.ajax({
-		url: 'http://www.weixinbm.com/do.php?ac=getcollecturl',
-		type: 'post',
-		data: {catid: catId,Url:window.location.href}
 	})
-	.done(function() {
-		console.log("success");
-	})
-	.fail(function() {
-		console.log("error");
-	})
-	.always(function() {
-		console.log("complete");
-	});
-}
+})
