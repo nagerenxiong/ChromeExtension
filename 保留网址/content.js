@@ -1,4 +1,4 @@
-var appendHtml = '<div id="cateGoryBox" style="overflow-y: scroll;height: 700px;position:fixed;right:0;top:50px;background-color:#fff;box-shadow: 0 0 5px #000;padding: 5px 10px;"><div style="text-align:center"><input type="button" value="采集"  id="postBtn"/></div></div>'
+var appendHtml = '<div id="cateGoryBox" style="overflow-y: scroll;min-height: 700px;position:fixed;right:0;top:50px;background-color:#fff;box-shadow: 0 0 5px #000;padding: 5px 10px;"><div style="text-align:center"><input type="button" value="采集"  id="postBtn" style="width:100px;height:30px"/></div><p>已选择:<span id="tip"></span></p></div>'
 $("body").append(appendHtml);
 var catid = "";
 chrome.runtime.sendMessage({
@@ -56,12 +56,18 @@ chrome.runtime.sendMessage({
 			$("#cateGoryBox .active").removeClass('active');
 			$(this).addClass('active');
 			catid = $(this).parent().attr('data-catid');
+			localStorage["catid"]=catid;
+			localStorage["catName"]=$(this).parent().attr('data-catname');
+			$("#tip").text(localStorage["catName"]);
 		}
 	})
 	$(".lv3").click(function() {
 		$("#cateGoryBox .active").removeClass('active');
 		$(this).addClass('active');
 		catid = $(this).parent().attr('data-catid');
+		localStorage["catid"]=catid;
+		localStorage["catName"]=$(this).parent().attr('data-catname');
+		$("#tip").text(localStorage["catName"]);
 	})
 });
 $("#postBtn").click(function() {
@@ -71,3 +77,13 @@ $("#postBtn").click(function() {
 
 	})
 })
+if(localStorage["catid"]){
+	catid=localStorage["catid"];
+	$("#tip").text(localStorage["catName"]);
+	console.log(catid)
+	setTimeout(function(){
+	console.log($("#cateGoryBox div[data-catid="+catid+"]")[0]);
+	$("#cateGoryBox div[data-catid="+catid+"]").children().addClass('active');
+	},2000)
+}
+

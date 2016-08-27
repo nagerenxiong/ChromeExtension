@@ -2,7 +2,7 @@
   "description": "记录url",
   "content_scripts":[
       {
-      "matches":["http://*/*","https://*/*"],
+      "matches":["http://mp.weixin.qq.com/*","https://mp.weixin.qq.com/*"],
       "css": ["css.css"],
       "js":["jquery.js","content.js"]
       }
