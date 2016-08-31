@@ -6,6 +6,7 @@
       "js":["jquery.js","content.js"]
       }
     ],
+ "options_page": "options.html",
   "background": {
       "persistent": true,
       "scripts": [ "bg.js" ]
