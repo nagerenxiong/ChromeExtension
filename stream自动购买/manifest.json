@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 {   
   "description": "NEXT刷单助手",     
   "content_scripts":[
@@ -25,3 +26,41 @@
    "name": "NEXT刷单助手",
    "version": "1"
 }
+=======
+{
+
+	"name": "AutoShoping",
+
+	"description": "AutoShopping",
+
+	"version": "2.0",
+
+	"permissions": [
+		"http://*/", "https://*/"
+	],
+
+	"background": {
+
+
+		"scripts": ["background.js", "main_script.js"],
+
+		"persistent": false
+
+	},
+
+	"content_scripts": [{
+		"matches": ["http://store.steampowered.com/*", "https://store.steampowered.com/*"],
+		"js": ["main_script.js"],
+		"run_at": "document_start",
+		"all_frames": true
+	}],
+	"browser_action": {
+
+		"default_title": "AutoShopping",
+		"default_popup": "popup.html"
+	},
+
+	"manifest_version": 2
+
+}
+>>>>>>> 0619bd6033bb7ee69f97aba8237e584fa216f04d
