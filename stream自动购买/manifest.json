@@ -1,36 +1,36 @@
 {
 
-	"name": "AutoShoping",
+  "name": "AutoShoping",
 
-	"description": "AutoShopping",
+  "description": "AutoShopping",
 
-	"version": "2.0",
+  "version": "2.0",
 
-	"permissions": [
-		"http://*/", "https://*/"
-	],
+  "permissions": [
+    "http://*/", "https://*/"
+  ],
 
-	"background": {
+  "background": {
 
 
-		"scripts": ["background.js", "main_script.js"],
+    "scripts": ["background.js"],
 
-		"persistent": false
+    "persistent": false
 
-	},
+  },
 
-	"content_scripts": [{
-		"matches": ["http://store.steampowered.com/*", "https://store.steampowered.com/*"],
-		"js": ["main_script.js"],
-		"run_at": "document_start",
-		"all_frames": true
-	}],
-	"browser_action": {
+  "content_scripts": [{
+    "matches": ["http://store.steampowered.com/*", "https://store.steampowered.com/*"],
+    "js": ["main_script.js"],
+    "run_at": "document_start",
+    "all_frames": true
+  }],
+  "browser_action": {
 
-		"default_title": "AutoShopping",
-		"default_popup": "popup.html"
-	},
+    "default_title": "AutoShopping",
+    "default_popup": "popup.html"
+  },
 
-	"manifest_version": 2
+  "manifest_version": 2
 
 }

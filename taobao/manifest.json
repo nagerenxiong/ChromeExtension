@@ -1,0 +1,17 @@
+{
+  "description": "店铺",
+  "content_scripts": [{
+    "matches": ["https://*.taobao.com/*", "https://*.tmall.com/*"],
+    "js": ["jquery.js", "content.js"]
+  }],
+  "options_page": "option.html",
+  "background": {
+    "scripts": ["jquery.js","background.js"]
+  },
+  "permissions": [
+    "http://*/*"
+  ],
+  "manifest_version": 2,
+  "name": "店铺",
+  "version": "1"
+}

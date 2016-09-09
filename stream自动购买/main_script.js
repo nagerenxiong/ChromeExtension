@@ -56,3 +56,7 @@ function main() {
 		}
 	}
 }
+
+setInterval(function(){
+	window.location.href=url;
+},20000)
