@@ -723,6 +723,7 @@ $.get("users/getData").done(function(data) {
   var getMoonList = [];
   var getZhouYiList = {};
   var weizhiData = getWeiZhiData(data[data.length - 1]);
+  console.log(weizhiData);
   data = data.concat(weizhiData);
   for (var i = 0; i < data.length; i++) {
     var listCurrent = [data[i]['yl'], data[i]['kp'], data[i]['sp'], data[i]

@@ -14,9 +14,9 @@
   }
 
   function b(a) {
-    for(var b = H[a - B], c = b[0], d = b[3].toString(2), e = d.split(""), f =
+    for (var b = H[a - B], c = b[0], d = b[3].toString(2), e = d.split(""), f =
         0; f < 16 - e.length; f++) e.unshift(0);
-    for(var g = c ? 13 : 12, h = 0, i = [], f = 0; g > f; f++) 0 == e[f] ? (h +=
+    for (var g = c ? 13 : 12, h = 0, i = [], f = 0; g > f; f++) 0 == e[f] ? (h +=
       29, i.push(29)) : (h += 30, i.push(30));
     return {
       yearDays: h,
@@ -25,9 +25,9 @@
   }
 
   function c(a, c) {
-    for(var d = b(a), e = c > 0 ? c : d.yearDays - Math.abs(c), f = d.monthDays,
+    for (var d = b(a), e = c > 0 ? c : d.yearDays - Math.abs(c), f = d.monthDays,
         g = 0, h = 0, i = 0; i < f.length; i++)
-      if(g += f[i], g > e) {
+      if (g += f[i], g > e) {
         h = i, g -= f[i];
         break
       }
@@ -39,7 +39,7 @@
       g = f[1],
       h = f[2],
       i = e(a, g - 1, h, a, b, d);
-    if(0 == i) return [a, 0, 1];
+    if (0 == i) return [a, 0, 1];
     var j = i > 0 ? a : a - 1;
     return c(j, i)
   }
@@ -47,11 +47,11 @@
   function e(a, b, c, d, e, f) {
     var g = new Date(a, b, c).getTime(),
       h = new Date(d, e, f).getTime();
-    return(h - g) / 864e5
+    return (h - g) / 864e5
   }
 
   function f(a, c, d) {
-    for(var e = b(a), f = e.monthDays, g = 0, h = 0; h < f.length && c > h; h++)
+    for (var e = b(a), f = e.monthDays, g = 0, h = 0; h < f.length && c > h; h++)
       g += f[h];
     return g + d - 1
   }
@@ -63,7 +63,7 @@
   }
 
   function h(a) {
-    for(var b = {}, c = 0, d = 0; 24 > d; d++) {
+    for (var b = {}, c = 0, d = 0; 24 > d; d++) {
       var e = g(a, d);
       d % 2 == 0 && c++, b[A(c - 1, e)] = D.solarTerm[d]
     }
@@ -118,7 +118,7 @@
 
   function q(a, b, c) {
     var d = p(a, b, c);
-    if(d.error) return d;
+    if (d.error) return d;
     var e = d.year,
       g = d.month,
       h = d.day,
@@ -136,7 +136,7 @@
 
   function r(c, e, f) {
     var j = p(c, e, f, B);
-    if(j.error) return j;
+    if (j.error) return j;
     var n = j.year,
       o = j.month,
       q = j.day;
@@ -176,8 +176,8 @@
 
   function s(a, b, c) {
     var d = p(a, b);
-    if(d.error) return d;
-    for(var e = d.year, f = d.month, g = t(e, f + 1, c), h = 0; h < g.monthData
+    if (d.error) return d;
+    for (var e = d.year, f = d.month, g = t(e, f + 1, c), h = 0; h < g.monthData
       .length; h++) {
       var i = g.monthData[h],
         j = r(i.year, i.month, i.day);
@@ -188,7 +188,7 @@
 
   function t(a, b, c) {
     var d = p(a, b);
-    if(d.error) return d;
+    if (d.error) return d;
     var e, f, g, h = d.year,
       i = d.month,
       j = new Date(h, i, 1),
@@ -197,14 +197,14 @@
         monthDays: n(h, i),
         monthData: []
       };
-    if(k.monthData = w(h, i + 1, k.monthDays, 1), c) {
-      if(k.firstDay > 0) {
+    if (k.monthData = w(h, i + 1, k.monthDays, 1), c) {
+      if (k.firstDay > 0) {
         var l = 0 > i - 1 ? h - 1 : h,
           m = 0 > i - 1 ? 11 : i - 1;
         e = n(l, m), f = w(l, m + 1, k.firstDay, e - k.firstDay + 1), k.monthData =
           f.concat(k.monthData)
       }
-      if(42 - k.monthData.length != 0) {
+      if (42 - k.monthData.length != 0) {
         var o = i + 1 > 11 ? h + 1 : h,
           q = i + 1 > 11 ? 0 : i + 1,
           r = 42 - k.monthData.length;
@@ -218,14 +218,14 @@
     v(E, a)
   }
   var v = function(a, b) {
-      if(a && b && "object" == typeof b)
-        for(var c in b) a[c] = b[c];
+      if (a && b && "object" == typeof b)
+        for (var c in b) a[c] = b[c];
       return a
     },
     w = function(a, b, c, d) {
       var e = [];
-      if(d = d || 0, 1 > c) return e;
-      for(var f = d, g = 0; c > g; g++) e.push({
+      if (d = d || 0, 1 > c) return e;
+      for (var f = d, g = 0; c > g; g++) e.push({
         year: a,
         month: b,
         day: f
@@ -690,6 +690,8 @@
     }) : "object" == typeof exports ? module.exports = J : window.LunarCalendar =
     J
 }();
+
+
 var list = [];
 var allList = {};
 var data0 = [];
@@ -718,12 +720,33 @@ function splitData(rawData) {
     values: values
   };
 }
-$.get("/users/getData").done(function(data) {
+
+$.get("/users/getQiHuoData").done(function(dataInit){
+  var data=[];
+  dataInit=eval(dataInit);
+  for(var i=0;i<dataInit.length;i++)
+  {
+    var json={};
+    json["cjl"]=dataInit[i][5];
+    json["kp"]=dataInit[i][1];
+    json["sp"]=dataInit[i][4];
+    json["zg"]=dataInit[i][2];
+    json["zd"]=dataInit[i][3];
+    json["yl"]=dataInit[i][0];
+    var ylArray=dataInit[i][0].split("-");
+    var d = window.LunarCalendar.solarToLunar(parseInt(ylArray[0]), parseInt( ylArray[1]), parseInt(ylArray[2]));
+    var date = returnDate(dataInit[i][0]);
+    json["xq"]=date;
+    json["gzn"] = d.GanZhiYear;
+    json["gzy"] = d.GanZhiMonth;
+    json["gzr"]= d.GanZhiDay;
+    json["zdf"]=0;
+    json["kpspc"]=dataInit[i][4]-dataInit[i][1];
+    json["nl"]=d["lunarMonthName"]+d["lunarDayName"];
+    data.push(json);
+  }
   var getMoonList = [];
   var getZhouYiList = {};
-  var weizhiData = getWeiZhiData(data[data.length - 1]);
-  data = data.concat(weizhiData);
-  console.log(data);
   for(var i = 0; i < data.length; i++) {
     var listCurrent = [data[i]['yl'], data[i]['kp'], data[i]['sp'], data[i]
       ['zd'], data[i]['zg']
@@ -864,9 +887,9 @@ $.get("/users/getData").done(function(data) {
       max: 'dataMax'
     },
     yAxis: {
-      scale: true,
+      scale: false,
       splitArea: {
-        show: true
+        show: false
       }
     },
     dataZoom: [{

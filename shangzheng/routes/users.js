@@ -14,6 +14,7 @@ router.get('/getData', function(req, res, next) {
   });
 });
 router.get('/getQiHuoData', function(req, res, next) {
+  console.log(11111111111111111111)
   request(
     'http://stock2.finance.sina.com.cn/futures/api/json.php/IndexService.getInnerFuturesDailyKLine?symbol=RB0',
     function(err2, res2,
