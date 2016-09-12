@@ -41,6 +41,9 @@ if (localStorage["shuaxin"] == "true") {
 	$("#start")[0].click();
 }
 
+setTimeout(function(){
+	window.location.reload();
+},1200000)
 
 function dy(timems) {
 	if (startFag) {
