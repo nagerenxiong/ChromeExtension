@@ -720,8 +720,8 @@ function splitData(rawData) {
     values: values
   };
 }
-
-$.get("/users/getQiHuoData").done(function(dataInit){
+var id=$("#id").val();
+$.get("/users/getQiHuoData/"+id).done(function(dataInit){
   var data=[];
   dataInit=eval(dataInit);
   for(var i=0;i<dataInit.length;i++)
@@ -769,7 +769,7 @@ $.get("/users/getQiHuoData").done(function(dataInit){
   var resoutList1 = resoutList.concat(getJieQiListR);
   option = {
     title: {
-      text: '上证指数',
+      text: id+"农历日K线",
       left: 'center'
     },
     tooltip: {
