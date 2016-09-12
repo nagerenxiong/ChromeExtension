@@ -747,6 +747,7 @@ $.get("/users/getQiHuoData").done(function(dataInit){
   }
   var getMoonList = [];
   var getZhouYiList = {};
+
   for(var i = 0; i < data.length; i++) {
     var listCurrent = [data[i]['yl'], data[i]['kp'], data[i]['sp'], data[i]
       ['zd'], data[i]['zg']
@@ -887,9 +888,9 @@ $.get("/users/getQiHuoData").done(function(dataInit){
       max: 'dataMax'
     },
     yAxis: {
-      scale: false,
+      scale: true,
       splitArea: {
-        show: false
+        show: true
       }
     },
     dataZoom: [{
