@@ -67,3 +67,11 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
 			})
 	}
 })
+
+chrome.webRequest.onBeforeSendHeaders.addListener(
+	function(details) {
+		console.log(details)
+		return true;
+	}, {
+		urls: ["http://sclub.jd.com/productpage/*"]
+	}, ["blocking"]);

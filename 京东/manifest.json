@@ -5,7 +5,8 @@
   },
   "content_scripts": [{
     "matches": ["http://*.jd.com/*", "https://*.jd.com/*"],
-    "js": ["jquery.js", "content.js"]
+    "js": ["jquery.js", "content.js"],
+    "run_at": "document_end" //dom加载完再引入脚本
   }],
   "background": {
     "persistent": true,
@@ -20,7 +21,10 @@
     "128": "icon128.png"
   },
   "permissions": [
-    "https://*/*", "tabs", "http://*/*", "background"
+    "tabs", "background", "tabs",
+    "*://*/*",
+    "webRequestBlocking", //注意这里一定要写
+    "webRequest" //注意这里一定要写
   ],
   "manifest_version": 2,
   "name": "京东",

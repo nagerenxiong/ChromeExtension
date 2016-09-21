@@ -3,45 +3,58 @@ var xx = url.lastIndexOf(".html");
 var pp = url.lastIndexOf("/");
 var id = url.substring(pp + 1, xx);
 var hpd = $(".rate strong").text();
-chrome.runtime.sendMessage({
-  type: 1,
-  id: id
-}, function(response) {
-  if (response == "error") {
-    $("#summary-price .dd").append(
-      "<span style='font-size:16px;color:red;font-weight:bold;margin-left:30px;'>佣金:<a href='https://media.jd.com/' target='_blank' style='color:red' >点击登录联盟</a>"
-    );
-    $(".summary-price .dd").append(
-      "<span style='font-size:16px;color:red;font-weight:bold;margin-left:30px;'>佣金:<a href='https://media.jd.com/' target='_blank' style='color:red'>点击登录联盟</a>"
-    );
-  } else if (response == "无") {
-    $("#summary-price .dd").append(
-      "<span style='font-size:16px;color:red;font-weight:bold;margin-left:30px;'>佣金:无"
-    );
-    $(".summary-price .dd").append(
-      "<span style='font-size:16px;color:red;font-weight:bold;margin-left:30px;'>佣金:无"
-    );
-  } else {
-    $("#summary-price .dd").append(
-      "<span style='font-size:16px;color:red;font-weight:bold;margin-left:30px;'>佣金:" +
-      response.v2 + "(" + response
-      .v1 +
-      ")" + hpd + "</span><a class='postToServerBtn' data-v2='" +
-      response.v2 +
-      "' data-v1='" + response.v1 +
-      "'  href='javascript:void(0)' style='font-size:16px;color:red;font-weight:bold;margin-left:30px;'>提交</a>"
-    );
-    $(".summary-price .dd").append(
-      "<span style='font-size:16px;color:red;font-weight:bold;margin-left:30px;'>佣金:" +
-      response.v2 + "(" + response
-      .v1 +
-      ")" + hpd + "</span><a class='postToServerBtn' data-v2='" +
-      response.v2 +
-      "' data-v1='" + response.v1 +
-      "' href='javascript:void(0)' style='font-size:16px;color:red;font-weight:bold;margin-left:30px;'>提交</a>"
-    );
-  }
-})
+window.onload = function() {
+  // $("li[data-anchor='#comment']")[0].click();
+  chrome.runtime.sendMessage({
+    type: 1,
+    id: id
+  }, function(response) {
+    if (response == "error") {
+      $("#summary-price .dd").append(
+        "<span style='font-size:16px;color:red;font-weight:bold;margin-left:30px;'>佣金:<a href='https://media.jd.com/' target='_blank' style='color:red' >点击登录联盟</a>"
+      );
+      $(".summary-price .dd").append(
+        "<span style='font-size:16px;color:red;font-weight:bold;margin-left:30px;'>佣金:<a href='https://media.jd.com/' target='_blank' style='color:red'>点击登录联盟</a>"
+      );
+    } else if (response == "无") {
+      $("#summary-price .dd").append(
+        "<span style='font-size:16px;color:red;font-weight:bold;margin-left:30px;'>佣金:无"
+      );
+      $(".summary-price .dd").append(
+        "<span style='font-size:16px;color:red;font-weight:bold;margin-left:30px;'>佣金:无"
+      );
+    } else {
+      $("#summary-price .dd").append(
+        "<span style='font-size:16px;color:red;font-weight:bold;margin-left:30px;'>佣金:" +
+        response.v2 + "(" + response
+        .v1 +
+        ")" + hpd +
+        "</span><span class='hpl_hhhh' style='font-size:16px;color:red;font-weight:bold;margin-left:30px;'>好评率:" +
+        $(".rate strong").text() +
+        "</span><a class='postToServerBtn' data-v2='" +
+        response.v2 +
+        "' data-v1='" + response.v1 +
+        "'  href='javascript:void(0)' style='font-size:16px;color:red;font-weight:bold;margin-left:30px;'>提交</a>"
+      );
+      $(".summary-price .dd").append(
+        "<span style='font-size:16px;color:red;font-weight:bold;margin-left:30px;'>佣金:" +
+        response.v2 + "(" + response
+        .v1 +
+        ")" + hpd +
+        "</span><span class='hpl_hhhh' style='font-size:16px;color:red;font-weight:bold;margin-left:30px;'>好评率:" +
+        $(".rate strong").text() +
+        "</span><a class='postToServerBtn' data-v2='" +
+        response.v2 +
+        "' data-v1='" + response.v1 +
+        "' href='javascript:void(0)' style='font-size:16px;color:red;font-weight:bold;margin-left:30px;'>提交</a>"
+      );
+    }
+  })
+  setTimeout(function() {
+    $("li[data-anchor='#comment']")[0].click();
+    $(".hpl_hhhh").text("好评率:" + $(".rate strong").text());
+  }, 3000)
+}
 
 $(document).on('click', '.postToServerBtn', function() {
   var commission = $(this).attr("data-v2").replace('￥', '');
