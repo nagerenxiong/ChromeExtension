@@ -1,0 +1,22 @@
+{
+  "description": "分享",
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  },
+  "content_scripts": [{
+    "matches": ["http://www.ubiaoqing.com/biaoqingbao/*",
+      "http://service.weibo.com/share/share.php*"
+    ],
+    "js": ["jquery.js", "content.js"],
+    "run_at": "document_end" //dom加载完再引入脚本
+  }],
+  "browser_action": {
+    "default_icon": "icon.png", // optional
+    "default_title": "分享" // optional; shown in tooltip
+  },
+  "manifest_version": 2,
+  "name": "分享",
+  "version": "1"
+}
