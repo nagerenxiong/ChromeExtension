@@ -1,0 +1,64 @@
+.content-wrap {
+  min-width: 350px;
+  padding: 20px;
+  margin: 0 auto;
+}
+.content-wrap .logo a {
+  color: #ff6600;
+  text-decoration: none;
+  font-size: 24px;
+  font-weight: bold;
+}
+.content-wrap .setting-wrap {
+  border: 1px dashed #cccccc;
+  position: relative;
+  display: block;
+  min-height: 20px;
+  margin-top: 20px;
+}
+.content-wrap .setting-wrap .title {
+  position: absolute;
+  z-index: 10;
+  background-color: #fff;
+  display: inline-block;
+  top: -13px;
+  left: 20px;
+  padding: 0 10px;
+  font-size: 16px;
+  letter-spacing: 10px;
+}
+.content-wrap .setting-wrap .shortcut {
+  padding: 10px;
+  margin-top: 5px;
+}
+.content-wrap .setting-wrap .shortcut .shortcut-wrap {
+  margin: 10px 0;
+}
+.content-wrap .setting-wrap .shortcut .shortcut-wrap .text {
+  font-size: 14px;
+  line-height: 22px;
+}
+.content-wrap .setting-wrap .shortcut .shortcut-wrap input {
+  margin: 5px auto 5px 25px;
+}
+.content-wrap .setting-wrap .menu {
+  padding-left: 10px;
+  margin-top: 5px;
+}
+.content-wrap .setting-wrap .menu .menu-wrap {
+  margin: 10px 0;
+}
+.content-wrap .setting-wrap .menu .menu-wrap .text {
+  font-size: 14px;
+  line-height: 22px;
+}
+.content-wrap .setting-wrap .menu .menu-wrap label {
+  font-size: 14px;
+}
+.content-wrap .setting-wrap .menu .menu-wrap label input {
+  margin: 5px 5px 5px 25px;
+}
+.qtk-flagship-notice {
+  font-size: 12px;
+  color: #ff0000;
+}

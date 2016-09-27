@@ -1,0 +1,56 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "manifest_version": 2,
+    "name": "好货君插件版",
+    "description": "好货君插件版 QQ:2670502763 官方网站：http://www.87k6.com",
+    "version": "2.8.4",
+    "permissions": [
+        "<all_urls>",
+        "contextMenus",
+        "tabs",
+        "storage",
+        "webRequest",
+        "notifications",
+        "cookies"
+    ],
+    "background": {
+        "page": "bg.html"
+    },
+    "browser_action": {
+        "default_icon": "icon16.png",
+        "default_popup": "index.html"
+    },
+    "icons": {
+        "16": "icon16.png",
+        "32": "icon32.png",
+        "48": "icon48.png",
+        "64": "icon64.png",
+        "128": "icon128.png"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "*://item.taobao.com/*",
+                "*://detail.tmall.com/*",
+                "*://ai.taobao.com/auction/edetail.htm*",
+                "*://detail.yao.95095.com/*",
+                "*://chaoshi.detail.tmall.com/*",
+                "*://world.tmall.com/*",
+                "*://tw.taobao.com/item/*",
+                "*://detail.tmall.hk/*",
+		"*://*.tmall.hk/*",
+		"*://s.taobao.com/*",
+		"*://list.tmall.com/*",
+		"*://*.taobao.com/*",
+		"*://*.tmall.com/*",
+		"*://*.jiyoujia.com/*"
+            ],
+            "js": [
+                "js/jquery.min.js",
+                "js/js/item.taobao.js",
+		"js/js/list.taotao.js"
+            ]
+        }
+    ]
+}

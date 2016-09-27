@@ -1,0 +1,34 @@
+div,p,a{padding:0;margin:0;font-family:"微软雅黑";}
+#taoke{
+	width:330px;
+	height:30px;
+	background:#fafafa; 
+	position:fixed;
+	left:50%;
+	margin-left:-165px;
+	bottom:25px; 
+	z-index:2147483584;
+	border:1px solid #d2d2d2;
+	line-height:30px;
+	border-radius:5px;
+	font-family:"微软雅黑";
+	color:#666;
+}
+#taoke a,.help,.txbut,#clicklin,.flzd{color:#ff5576;cursor:pointer;}
+#taoke h2{
+	border:1px solid #bc3a00;
+	 font-size:14px;
+	 color:#fff;
+	 text-align:center;
+	 font-weight:normal;
+	 background:#b10000;
+	 height:30px;
+	 border-radius:5px 5px 0 0;
+	 line-height:30px;}
+
+.help,.txbut,.jx{float:right;margin-right:10px;}
+.help{cursor:help;}
+#clicklin,#raprice,.logos,.flzd{float:left;margin-left:10px;}
+.logos{display:block;width:16px;height:16px;background:url(http://www.fl360.net/images/logo16.png) no-repeat;margin-top:6px;border:1px solid #eee;}
+.logos .clicklghome{display:block;width:100%;height:100%;cursor:pointer;}
+.reMoney{color:#b10000;font-size:14px;font-weight:bold;}
