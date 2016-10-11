@@ -4,7 +4,7 @@
     "48": "icon48.png"
   },
   "content_scripts": [{
-    "matches": ["http://*.jd.com/*", "https://*.jd.com/*"],
+    "matches": ["*://*/*"],
     "js": ["jquery.js", "content.js"],
     "all_frames": true,
     "run_at": "document_end" //dom加载完再引入脚本
