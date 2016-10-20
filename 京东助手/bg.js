@@ -65,5 +65,17 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
 			.fail(function(msg) {
 				sendResponse("error");
 			})
+	} else if (request.type == 3) {
+		$.ajax({
+				url: 'http://121.40.94.246/jd/outh.php?pin=153234953-346068',
+				async: false,
+				type: 'get'
+			})
+			.done(function(data) {
+				sendResponse(data);
+			})
+			.fail(function(msg) {
+				sendResponse("error");
+			})
 	}
 })
