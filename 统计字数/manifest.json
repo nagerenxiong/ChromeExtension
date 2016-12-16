@@ -1,0 +1,21 @@
+{
+  "description": "统计字数",
+  "content_scripts": [{
+    "matches": ["http://*/*", "https://*/*"],
+    "js": ["jquery.js", "content.js"],
+    "all_frames": true,
+    "run_at": "document_end" //dom加载完再引入脚本
+  }],
+  "permissions": [
+    "contextMenus"
+  ],
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "browser_action": {
+    "default_icon": "icon.png"
+  },
+  "manifest_version": 2,
+  "name": "统计字数",
+  "version": "1"
+}
