@@ -1,4 +1,5 @@
-var isIp=0,isIpD=0;
+// rome.tabs.executeScript(integer tabId, tabs.InjectDetails details, function callback)
+var isIp=1,isIpD=1;
 $("#save").click(function(){
 	if($("#isIp").prop("checked")) isIp=1;
 	if($("#isIpD").prop("checked")) isIpD=1;
@@ -22,16 +23,18 @@ $("#save").click(function(){
 	})
 	console.log(bmdList);
 	var json={"isIp":isIp,"isIpD":isIpD,"ip_day":ip_day,"ip_time":ip_time,"ipD_day":ipD_day,"ipD_time":ipD_time,"bmdList":bmdList}
-	chrome.extension.getBackgroundPage().start(json, function(data) {
-		console.log(data);
-		if (data.status=="noexit") {
-			alert("请联系QQ83091747购买会员")
-		} else if (data.status== "error") {
-			alert("请登陆账号");
-		}
-		else if(data.status="success")
-		{
+	chrome.extension.getBackgroundPage().start(json, function(res) {
+		if (res == "success") {
+			chrome.extension.getBackgroundPage().goFlag=true;
 			window.open("https://vip.58.com/app/visitor");
+		} else if (res == "error") {
+			alert("请登陆58账号");
+		}
+		else if(res=="error_hy"){
+			alert("请联系QQ1274123708购买会员");
+		}
+		else if(res=="fail"){
+			alert("未知错误，请联系管理员");
 		}
 	});
 })

@@ -1,0 +1,180 @@
+﻿ <h2 class="pull-left">
+        	Available jobs        </h2>
+
+ <div class="pull-right">
+    <a style="color:#4D4843;" href="http://promo.com/rss/available_jobs/7c9e8e0891b6ee4e1593cd50eae31ac852ab52a82ea6c778714687">Jobs RSS <img style="position:relative;top:-1px;" src="./Work _ Dashboard _ promo_files/rss_icon.png"></a>
+</div>
+        
+                    <a class="special pull-left" href="http://promo.com/t/jobs/status/reviewable/">
+                See all            </a>
+            <span class="dojob_list_info pull-right">
+                Showing 2 of 16            </span>
+        
+        <div class="clear"></div>
+    </div>
+    <ol class="job_list" id="job-list-reviewable">
+      <li class="order reviewable">
+    <img class="doc_type" src="https://promo.com/tc/assets/images/apps/translate/icon_pro.png" alt="" />
+    <img class="doc_type" src="https://promo.com/tc/assets/images/apps/translate/icon_text.png" alt="" />
+    <div class="basic-info">
+        <h3>
+                        [[[ name for...&nbsp;
+                  </h3>
+        
+    </div>
+    <div class="meta-info">
+        <div class="meta-info-container">
+                    ($0.009/order)
+            <span class="price line1">$0.06  </span><br>
+            <span class="date line2">
+                                  Dec 3 2015                            </span>
+        </div>
+
+        <a href="http://promo.com/t/jobs/details/15726362/" class="large-details-link" data-job-id="15726362">Details</a>
+    </div>
+    <div class="clear"></div>
+          </li>
+      <li class="order reviewable">
+    <img class="doc_type" src="./Work _ Dashboard _ promo_files/icon_standard.png" alt="">
+    <img class="doc_type" src="./Work _ Dashboard _ promo_files/icon_text.png" alt="">
+    <div class="basic-info">
+        <h3>
+                        We need more data...&nbsp;
+                  </h3>
+        
+    </div>
+    <div class="meta-info">
+        <div class="meta-info-container">
+                    ($0.003/order)
+            <span class="price line1">$0.33  </span><br>
+            <span class="date line2">
+                                  Dec 2 2015                            </span>
+        </div>
+
+        <a href="http://promo.com/t/jobs/details/15726050/" class="large-details-link" data-job-id="15726050">Details</a>
+    </div>
+    <div class="clear"></div>
+          </li>
+<h2 class="pull-left">
+        	            Reviewable jobs        </h2>
+
+                    <div class="pull-right">
+    <a style="color:#4D4843;" href="http://promo.com/rss/available_jobs/7c9e8e0891b6ee4e1593cd50eae31ac852ab52a82ea6c778714687">Jobs RSS <img style="position:relative;top:-1px;" src="./Work _ Dashboard _ promo_files/rss_icon.png"></a>
+</div>
+        
+                    <a class="special pull-left" href="http://promo.com/t/jobs/status/reviewable/">
+                See all            </a>
+            <span class="dojob_list_info pull-right">
+                Showing 5 of 16            </span>
+        
+        <div class="clear"></div>
+    </div>
+    <ol class="job_list" id="job-list-reviewable">
+      <li class="order reviewable">
+    <img class="doc_type" src="./Work _ Dashboard _ promo_files/icon_standard.png" alt="">
+    <img class="doc_type" src="./Work _ Dashboard _ promo_files/icon_text.png" alt="">
+    <div class="basic-info">
+        <h3>
+                        [[[ name for...&nbsp;
+                  </h3>
+        
+    </div>
+    <div class="meta-info">
+        <div class="meta-info-container">
+                    ($0.009/order)
+            <span class="price line1">$0.06  </span><br>
+            <span class="date line2">
+                                  Dec 3 2015                            </span>
+        </div>
+
+        <a href="http://promo.com/t/jobs/details/15726362/" class="large-details-link" data-job-id="15726362">Details</a>
+    </div>
+    <div class="clear"></div>
+          </li>
+      <li class="order reviewable">
+    <img class="doc_type" src="./Work _ Dashboard _ promo_files/icon_standard.png" alt="">
+    <img class="doc_type" src="./Work _ Dashboard _ promo_files/icon_text.png" alt="">
+    <div class="basic-info">
+        <h3>
+                        We need more data...&nbsp;
+                  </h3>
+        
+    </div>
+    <div class="meta-info">
+        <div class="meta-info-container">
+                    ($0.003/order)
+            <span class="price line1">$0.33  </span><br>
+            <span class="date line2">
+                                  Dec 2 2015                            </span>
+        </div>
+
+        <a href="http://promo.com/t/jobs/details/15726050/" class="large-details-link" data-job-id="15726050">Details</a>
+    </div>
+    <div class="clear"></div>
+          </li>
+      <li class="order reviewable">
+    <img class="doc_type" src="./Work _ Dashboard _ promo_files/icon_standard.png" alt="">
+    <img class="doc_type" src="./Work _ Dashboard _ promo_files/icon_text.png" alt="">
+    <div class="basic-info">
+        <h3>
+                        Ghost House...&nbsp;
+                  </h3>
+       
+    </div>
+    <div class="meta-info">
+        <div class="meta-info-container">
+                    ($0.003/order)
+            <span class="price line1">$2.55  </span><br>
+            <span class="date line2">
+                                  Dec 2 2015                            </span>
+        </div>
+
+        <a href="http://promo.com/t/jobs/details/15725808/" class="large-details-link" data-job-id="15725808">Details</a>
+    </div>
+    <div class="clear"></div>
+          </li>
+      <li class="order reviewable">
+    <img class="doc_type" src="./Work _ Dashboard _ promo_files/icon_standard.png" alt="">
+    <img class="doc_type" src="./Work _ Dashboard _ promo_files/icon_text.png" alt="">
+    <div class="basic-info">
+        <h3>
+                        Perfect Number...&nbsp;
+                  </h3>
+        
+    </div>
+    <div class="meta-info">
+        <div class="meta-info-container">
+                    ($0.003/order)
+            <span class="price line1">$2.58  </span><br>
+            <span class="date line2">
+                                  Dec 2 2015                            </span>
+        </div>
+
+        <a href="http://promo.com/t/jobs/details/15725700/" class="large-details-link" data-job-id="15725700">Details</a>
+    </div>
+    <div class="clear"></div>
+          </li>
+      <li class="order reviewable">
+    <img class="doc_type" src="./Work _ Dashboard _ promo_files/icon_standard.png" alt="">
+    <img class="doc_type" src="./Work _ Dashboard _ promo_files/icon_text.png" alt="">
+    <div class="basic-info">
+        <h3>
+                        The Recipe
+What...&nbsp;
+                  </h3>
+        
+    </div>
+    <div class="meta-info">
+        <div class="meta-info-container">
+                    ($0.009/order)
+            <span class="price line1">$2.16  </span><br>
+            <span class="date line2">
+                                  Dec 2 2015                            </span>
+        </div>
+
+        <a href="http://promo.com/t/jobs/details/15725627/" class="large-details-link" data-job-id="15725627">Details</a>
+    </div>
+    <div class="clear"></div>
+          </li>
+  </ol>
+</div>

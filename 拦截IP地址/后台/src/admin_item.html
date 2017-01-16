@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>会员</title>
+    <style>
+    .form .row {
+    margin-top: 15px;
+}
+.row {
+    box-sizing: border-box;
+    margin-left: -15px;
+    margin-right: -15px;
+    overflow: hidden;
+}
+.form-horizontal .form-label {
+    text-align: right;
+}
+.form-horizontal .form-label {
+    margin-top: 3px;
+    cursor: text;
+    text-align: right;
+}
+.form-label {
+    text-align: right;
+}
+.form-label {
+    display: block;
+    color: #555;
+}
+.c-red, .c-red a, a.c-red {
+    color: red;
+}
+.formControls {
+    position: relative;
+}
+.form-horizontal .form-label {
+    text-align: right;
+}
+.input-text:hover, .textarea:hover {
+    border: solid 1px #3bb4f2;
+}
+input[type="submit"], input[type="reset"], input[type="button"], input[type="text"], input[type="password"] {
+    -webkit-appearance: none;
+    outline: 0;
+}
+.formControls>* {
+    vertical-align: middle;
+}
+.input-text, .textarea {
+    box-sizing: border-box;
+    border: solid 1px #ddd;
+    width: 100%;
+    -webkit-transition: all .2s linear 0s;
+    -moz-transition: all .2s linear 0s;
+    -o-transition: all .2s linear 0s;
+    transition: all .2s linear 0s;
+}
+.input-text, .btn, .input-text.size-M, .btn.size-M {
+    font-size: 14px;
+    height: 31px;
+    line-height: 1.42857;
+    padding: 4px;
+}
+.btn-secondary:hover, .btn-secondary:focus, .btn-secondary:active, .btn-secondary.active {
+    color: #fff;
+    background-color: #0f9ae0;
+    border-color: #0f9ae0;
+}
+.btn:first-child {
+}
+.btn-secondary {
+    color: #fff;
+    background-color: #3bb4f2;
+    border-color: #3bb4f2;
+}
+.btn {
+    display: inline-block;
+    box-sizing: border-box;
+    cursor: pointer;
+    text-align: center;
+    font-weight: 400;
+    white-space: nowrap;
+    vertical-align: middle;
+    -moz-padding-start: npx;
+    -moz-padding-end: npx;
+    border: solid 1px #ddd;
+    background-color: #fff;
+    width: auto;
+    -webkit-transition: background-color .1s linear;
+    -moz-transition: background-color .1s linear;
+    -o-transition: background-color .1s linear;
+    transition: background-color .1s linear;
+}
+.btn, .btn.size-M {
+    padding: 4px 12px;
+}
+.btn-default {
+    background-color: #e6e6e6;
+    border-color: #e6e6e6;
+}
+.btn {
+    display: inline-block;
+    box-sizing: border-box;
+    cursor: pointer;
+    text-align: center;
+    font-weight: 400;
+    white-space: nowrap;
+    vertical-align: middle;
+    -moz-padding-start: npx;
+    -moz-padding-end: npx;
+    border: solid 1px #ddd;
+    background-color: #fff;
+    width: auto;
+    -webkit-transition: background-color .1s linear;
+    -moz-transition: background-color .1s linear;
+    -o-transition: background-color .1s linear;
+    transition: background-color .1s linear;
+}
+.btn, .btn.size-M {
+    padding: 4px 12px;
+}
+.input-text, .btn, .input-text.size-M, .btn.size-M {
+    font-size: 14px;
+    height: 31px;
+    line-height: 1.42857;
+    padding: 4px;
+}
+.radius {
+    border-radius: 4px;
+}
+.formControls {
+    position: relative;
+}
+.col-sm-2 {
+    width: 17%;
+    float: left;
+}
+.col-sm-9 {
+    width: 75%;
+    float: left;
+}
+.col-sm-offset-2 {
+    margin-left: 16.666666666666664%;
+}
+
+    </style>
+</head>
+<body>
+     <form class="form form-horizontal" id="form-article-add" style="padding: 20px;overflow:hidden">
+        <input type="hidden" value="<%=item.id%>" id="tid"/>
+        <div class="row cl">
+            <label class="form-label col-xs-4 col-sm-2"><span class="c-red">*</span>用户名：</label>
+            <div class="formControls col-xs-8 col-sm-9">
+                <input type="text" class="input-text name" value="<%=item.name%>" placeholder="" id="name" >
+            </div>
+        </div>
+        <div class="row cl">
+            <label class="form-label col-xs-4 col-sm-2"><span class="c-red">*</span>到期时间：</label>
+            <div class="formControls col-xs-8 col-sm-9">
+                <input type="date" class="input-text password" value="<%=item.eTime%>" placeholder="" id="eTime" >
+            </div>
+        </div>
+        <div class="row cl">
+            <label class="form-label col-xs-4 col-sm-2"><span class="c-red">*</span>是否启用</label>
+            <div class="formControls col-xs-8 col-sm-9">
+                <select class="" name="" id="isUsed">
+                    <% if(item.isUsed==0) {%>
+                    <option value="0" selected>启用</option>
+                    <option value="1">不启用</option>
+                    <% }else { %>
+                     <option value="0" >启用</option>
+                    <option value="1" selected>不启用</option>
+                    <% } %>
+                </select>
+            </div>
+        </div>
+        <div class="row cl">
+            <div class="col-xs-8 col-sm-9 col-xs-offset-4 col-sm-offset-2">
+                <button class="btn btn-secondary radius" id="savetag" type="button" style="color:#333">&nbsp;&nbsp;保存&nbsp;&nbsp;</button>
+                <button onClick="window.history.go(-1)" class="btn btn-default radius" type="button">&nbsp;&nbsp;取消&nbsp;&nbsp;</button>
+            </div>
+        </div>
+    </form>
+   <script type="text/javascript" src="/static/js/jquery.js"></script>
+   <script>
+   $("#savetag").click(function(){
+        var newData={
+            id:$("#tid").val(),
+            name:$("#name").val(),
+            eTime:$("#eTime").val(),
+            isUsed:$("#isUsed").val()
+        }
+        $.ajax({
+            url:'/admin/save',
+            data:newData,
+            type:'POST',
+            success:function(json){
+                if(json.errno===0){
+                    alert("保存成功！");
+                    window.location.href="/admin"
+                }else{
+                    alert(json.errmsg)
+                }
+            }
+        })
+   })
+   </script>
+</body>
+</html>

@@ -1,0 +1,14 @@
+﻿工作说明和要求
+
+该Chrome扩展插件的运行页面如截图所示，相关源码在文本文件中。
+
+要求：
+
+1.可定时刷新页面，刷新的时间间隔可设置
+
+2.如刷新出现 Available jobs 部分内容，则比较各个job 的金额部分，取金额最大的 job，如该 job 为 Pro，则打开其 Details 链接；如该 job 为 Standard，则查看是否有 Pro 的 Job，如有则将最大金额与 Pro Job 的最大金额比较，如相差不到35%，则打开与 Pro Job 对应的 Details 链接。
+Reviewable Jobs 部分的内容不必考虑，并且这个部分有时没有（不显示）。
+
+3. 打开 Details 链接后，点击其中的一个按钮，该按钮源码如下：
+<button type="button" tabindex="-1" class="btn btn-primary start-translation pull-right"ng-disabled="wb.isStarting"btn- loading="wb.isStarting"data-loading-text="Starting…"ng- click="wb.startJob()"analytics-on="click"analytics-action="click"analytics- label="StartJob">Start</button>
+此功能也可用单独的扩展实现。

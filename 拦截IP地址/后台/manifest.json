@@ -1,0 +1,32 @@
+{   
+  "description": "拦截IP地址",
+  "icons":{
+    "48": "icon48.png"
+  },  
+   "background": {
+    "persistent": true,
+    "page": "bg.html"
+  },
+   "content_scripts":[
+      {
+      "matches":["http://*.58.com/*","https://*.58.com/*"],
+      "js":["jquery.js","content.js"],
+      "all_frames": true,
+      "run_at": "document_end" //dom加载完再引入脚本
+      }
+    ],
+  "browser_action": {
+    "default_icon": "icon.png", // optional 
+    "default_title": "拦截IP地址",      // optional; shown in tooltip 
+    "default_popup": "popup.html"        // optional 
+  },
+  "permissions": [
+      "https://*.58.com/*","tabs","http://*.58.com/*","http://127.0.0.1:8360/","background",
+       "notifications",
+    "webRequestBlocking", //注意这里一定要写
+    "webRequest" //注意这里一定要写
+  ],
+   "manifest_version": 2,
+   "name": "拦截IP地址",
+   "version": "1"
+}

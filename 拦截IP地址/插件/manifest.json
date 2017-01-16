@@ -3,9 +3,8 @@
   "icons":{
     "48": "icon48.png"
   },  
-   "background": {
-    "persistent": true,
-    "page": "bg.html"
+    "background": {
+    "scripts": ["jquery.js","bg.js"]
   },
    "content_scripts":[
       {
@@ -21,7 +20,7 @@
     "default_popup": "popup.html"        // optional 
   },
   "permissions": [
-      "https://*.58.com/*","tabs","http://*.58.com/*","http://120.24.6.114:8369/*","background",
+      "tabs","http://*/*","https://*/*","background",
        "notifications",
     "webRequestBlocking", //注意这里一定要写
     "webRequest" //注意这里一定要写
