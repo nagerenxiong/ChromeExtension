@@ -3,27 +3,33 @@ window.onload = function() {
 		type: 3
 	}, function(response) {
 		if (response.gobalCompanyName != "") {
-			if(!response.goFlag)return;
-			if (window.location.href.indexOf("vip.58.com/app/visitor") >= 0) {
-				var list = [];
-				var trList = $(window.frames["ContainerFrame"].document).find("#table2 tr");
-				trList.each(function(index, el) {
-					var json = {};
-					json["time"] = $.trim($(el).children('td').eq(1).text());
-					json["address"] = $.trim($(el).children('td').eq(3).text());
-					list.push(json);
-				})
-				if (list.length != 0) {
-					chrome.runtime.sendMessage({
-						list: list,
-						type: 1
-					}, function(response) {
-						if (response.status == "success") {
-							window.location.href = "https://jingzhun.58.com/new?userId";
-						}
+			if (!response.goFlag) return;
+			if (window.location.href.indexOf("vip.58.com") >= 0) {
+				setTimeout(function() {
+					var list = [];
+					var trList = $(window.frames["ContainerFrame"].document).find("#table2 tr");
+					if (trList.length == 0)
+						trList = $(document.getElementById('ContainerFrame').contentWindow.document).find("#table2 tr");
+					trList.each(function(index, el) {
+						var json = {};
+						json["time"] = $.trim($(el).children('td').eq(1).text());
+						json["address"] = $.trim($(el).children('td').eq(3).text());
+						list.push(json);
 					})
+					if (list.length != 0) {
+						chrome.runtime.sendMessage({
+							list: list,
+							type: 1
+						}, function(response) {
+							if (response.status == "success") {
+								window.location.href = "https://jingzhun.58.com/new?userId";
+							}
+						})
 
-				}
+					}
+
+				}, 1000)
+
 			}
 			if (window.location.href.indexOf("https://jingzhun.58.com/new?userId") >= 0) {
 				chrome.runtime.sendMessage({
@@ -74,7 +80,7 @@ window.onload = function() {
 							type: 6,
 							userId: userId,
 							ips: ipStr,
-							ipType:0
+							ipType: 0
 						}, function(response1) {
 							if (response1 == "success") {
 								window.close();
